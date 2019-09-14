@@ -1,8 +1,20 @@
-package com.exercicios_banco_imobiliario.domain;
-
+package exercicios_banco_imobiliario.domain;
+/**
+ * @author alefe
+ * @author artur
+ * @author aisllan
+ * @author carlos
+ *
+ */
 public class Carta {
 	
+	/**
+	 * int value for id
+	 */
 	private int id;
+	/**
+	 * String value for name
+	 */
 	private String nome;
 	private int preco;
 	private int aluguelSemCasa;
@@ -11,19 +23,23 @@ public class Carta {
 	private int aluguelTresCasas;
 	private int aluguelQuatroCasas;
 	private int aluguelHotel;
-	private int hipoteca;
+	private int numeroCasas;
 	private int precoDaCasa;
 	private int[] indices = null;
 	
-	//Construtor de Cartas Especiais
+	
+	/**
+	 * @param id
+	 * @param nome
+	 */
 	public Carta(int id, String nome) {
 		this.id = id;
 		this.nome = nome;
 	}
 	
-	//Construtor de Títulos de Propriedade
+
 	public Carta(int id, String nome, int preco, int aluguelSemCasa, int aluguelUmaCasa,
-			int aluguelDuasCasas, int aluguelTresCasas, int aluguelQuatroCasas, int aluguelHotel, int hipoteca,
+			int aluguelDuasCasas, int aluguelTresCasas, int aluguelQuatroCasas, int aluguelHotel, int numeroCasas,
 			int precoDaCasa) {
 		this.id = id;
 		this.nome = nome;
@@ -38,7 +54,7 @@ public class Carta {
 		this.precoDaCasa = precoDaCasa;
 	}
 
-	//Construtor de Companhias
+	
 	public Carta(int id, String nome, int preco, int hipoteca) {
 		this.id = id;
 		this.nome = nome;
@@ -93,4 +109,5 @@ public class Carta {
 	public int[] getIndices() {
 		return indices;
 	}
+
 }
